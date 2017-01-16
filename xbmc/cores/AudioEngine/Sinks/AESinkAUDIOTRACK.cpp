@@ -779,8 +779,9 @@ void CAESinkAUDIOTRACK::EnumerateDevicesEx(AEDeviceInfoList &list, bool force)
   m_info.m_wantsIECPassthrough = true;
   if (!CXBMCApp::IsHeadsetPlugged())
   {
-    CLog::Log(LOGWARNING, "You are using PCM passthrough - you were warned!");
-    CJNIAudioFormat::ENCODING_IEC61937 = CJNIAudioFormat::ENCODING_PCM_16BIT;
+    // PCM HACK EVIL AND WILL KILL KITTENS
+    if (CJNIAudioFormat::ENCODING_IEC61937 == -1)
+      CJNIAudioFormat::ENCODING_IEC61937 = CJNIAudioFormat::ENCODING_PCM_16BIT;
 
     m_info.m_deviceType = AE_DEVTYPE_HDMI;
     m_info.m_wantsIECPassthrough = false;
