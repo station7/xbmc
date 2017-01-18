@@ -780,8 +780,11 @@ void CAESinkAUDIOTRACK::EnumerateDevicesEx(AEDeviceInfoList &list, bool force)
   if (!CXBMCApp::IsHeadsetPlugged())
   {
     // PCM HACK EVIL AND WILL KILL KITTENS
-    if (CJNIAudioFormat::ENCODING_IEC61937 == -1)
+    if (CSettings::GetInstance().GetBool(CSettings::SETTING_AUDIOOUTPUT_FORCEPCM))
+    {
+      CLog::Log(LOGWARNING, "Using PCM hack - use knows that this is harmful!");
       CJNIAudioFormat::ENCODING_IEC61937 = CJNIAudioFormat::ENCODING_PCM_16BIT;
+    }
 
     m_info.m_deviceType = AE_DEVTYPE_HDMI;
     m_info.m_wantsIECPassthrough = false;
