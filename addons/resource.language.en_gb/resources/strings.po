@@ -19046,19 +19046,7 @@ msgctxt "#36620"
 msgid "Enable high quality downscaling of pictures (uses more memory and has moderate performance impact)."
 msgstr ""
 
-#. Audio -> Passthrough Force PCM
-#: system/settings/settings.xml
-msgctxt "#36621"
-msgid "Force PCM Hack"
-msgstr ""
-
-#. Description of Audio -> Passthrough Force PCM
-#: system/settings/settings.xml
-msgctxt "#36622"
-msgid "This transmits Passthrough data tunneled via an integer format. If your AVR does not detect it properly, it will end up with loud noise. Handle with care. This will possibly harm your ears, the ears of your family and those of your cats. Standard devices don't need this setting."
-msgstr ""
-
-#empty strings from id 36623 to 36899
+#empty strings from id 36621 to 36899
 
 #: xbmc/media/MediaType.cpp
 msgctxt "#36900"

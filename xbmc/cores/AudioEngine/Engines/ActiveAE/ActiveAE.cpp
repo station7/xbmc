@@ -2632,7 +2632,6 @@ void CActiveAE::OnSettingsChange(const std::string& setting)
       setting == CSettings::SETTING_AUDIOOUTPUT_SAMPLERATE             ||
       setting == CSettings::SETTING_AUDIOOUTPUT_MAINTAINORIGINALVOLUME ||
       setting == CSettings::SETTING_AUDIOOUTPUT_GUISOUNDMODE           ||
-      setting == CSettings::SETTING_AUDIOOUTPUT_FORCEPCM               ||
       setting == CSettings::SETTING_AUDIOOUTPUT_STREAMNOISE)
   {
     m_controlPort.SendOutMessage(CActiveAEControlProtocol::RECONFIGURE);

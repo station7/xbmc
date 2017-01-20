@@ -2551,15 +2551,6 @@
           </dependencies>
           <control type="toggle" />
         </setting>
-        <setting id="audiooutput.forcepcm" type="boolean" label="36621" help="36622">
-          <level>2</level>
-          <default>false</default>
-          <dependencies>
-            <dependency type="visible" on="property" name="aesettingvisible" setting="audiooutput.config">audiooutput.passthrough</dependency>
-            <dependency type="enable" setting="audiooutput.passthrough" operator="is">true</dependency>
-          </dependencies>
-          <control type="toggle" />
-        </setting>
       </group>
       <group id="4" label="14251">
         <setting id="audiooutput.dspaddonsenabled" type="boolean" label="36441" help="36438">
